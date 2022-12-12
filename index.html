@@ -4,8 +4,46 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title>Batu Gunting Kertas</title>
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/bootstrap.css" />
   </head>
   <body>
-    <script type="text/javascript" src="./script.js"></script>
+    <div class="container-fluid py-2 position-relative">
+      <div class="container">
+        <div class="row">
+          <div class="d-flex justify-content-lg-end align-items-lg-end">
+            <p class="fs-25">Highest Score :</p>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-1">
+            <img
+              src="./assets/dots.svg"
+              alt="dots"
+              class="position-absolute dots-lg-1"
+            />
+          </div>
+          <div class="col-lg-2 pt-5 mt-5 ms-5 ps-1">
+            <p>Com -</p>
+          </div>
+          <div class="col-lg-3 offset-lg-1">
+            <img src="./assets/kertas.png" alt="" class="flip">
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-2 offset-lg-3">
+            <p class="size-75 rotate">VS</p>
+          </div>
+          <div class="col-lg-4 offset-lg-3 mt-3">
+            <img src="./assets/won.svg" alt="You Won!" class="img-fluid" />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script type="text/javascript" src="./js/script.js"></script>
+    <script type="text/javascript" src="./js/bootstrap.bundle.js"></script>
   </body>
 </html>

@@ -33,11 +33,3 @@ if (user == enemy || user == enemy2) {
 } else {
    hasil = 'Pilihan Salah!'
 } 
-   
-
-//Display Output
-alert('Kamu Memilih : '+ user +'\nLawan Memilih : '+ enemy +'\n'+ hasil);
-
-lagi = confirm('Lagi?')
-}
-alert('Terima Kasih Sudah Bermain!')
