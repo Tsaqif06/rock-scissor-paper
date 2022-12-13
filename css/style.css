@@ -4,7 +4,6 @@
 html,
 body {
   box-sizing: border-box;
-  overflow-x: hidden;
   font-family: "Stick", Arial, sans-serif;
   color: white;
 }
@@ -12,6 +11,10 @@ body {
 body {
   width: 100%;
   height: 100vh;
+}
+
+.row {
+  margin-top: -75px;
 }
 
 .container-fluid {
@@ -26,8 +29,8 @@ body {
 }
 
 .fs-25 {
-    font-size: 25px;
-    letter-spacing: 4px;
+  font-size: 25px;
+  letter-spacing: 4px;
 }
 
 .ps-1 p {
@@ -35,26 +38,67 @@ body {
   word-wrap: now;
 }
 
+.size-50 {
+  font-size: 50px;
+}
+
 .size-75 {
-    font-size: 75px;
+  font-size: 75px;
 }
 
 .rotate {
-    letter-spacing: 3px;
-    transform: rotate(-8.85deg);
-    -webkit-transform: rotate(-8.85deg);
-    -moz-transform: rotate(-8.85deg);
-    -ms-transform: rotate(-8.85deg);
-    -o-transform: rotate(-8.85deg);
+  letter-spacing: 3px;
+  transform: rotate(-8.85deg);
+  -webkit-transform: rotate(-8.85deg);
+  -moz-transform: rotate(-8.85deg);
+  -ms-transform: rotate(-8.85deg);
+  -o-transform: rotate(-8.85deg);
 }
 
 .flip {
-    position: absolute;
-    top: 120px;
-    left: 600px;
-    transform: rotate(180deg);
-    -webkit-transform: rotate(180deg);
-    -moz-transform: rotate(180deg);
-    -ms-transform: rotate(180deg);
-    -o-transform: rotate(180deg);
+  left: 600px;
+  transform: rotate(180deg);
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+}
+
+.topa-50 {
+  position: absolute;
+  top: 50px;
+}
+
+.topa-255 {
+  position: absolute;
+  top: 255px;
+}
+
+.topr-50 {
+  position: relative;
+  top: -50px;
+}
+
+.you {
+  position: absolute;
+  top: 460px;
+  left: 240px;
+}
+
+.you-txt {
+  position: absolute;
+  top: 480px;
+  left: 240px;
+}
+
+.batu {
+  left: 0;
+}
+
+.gunting {
+  left: 50px
+}
+
+.kertas {
+  left: 100px;
 }
