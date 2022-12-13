@@ -34,9 +34,8 @@ body {
   letter-spacing: 4px;
 }
 
-.ps-1 p {
+.ps-lg-1 p {
   font-size: 50px;
-  word-wrap: now;
 }
 
 .size-50 {
@@ -64,6 +63,10 @@ body {
   -moz-transform: rotate(180deg);
   -ms-transform: rotate(180deg);
   -o-transform: rotate(180deg);
+}
+
+.left-43 {
+  left: 43%;
 }
 
 .topa-50 {
@@ -120,10 +123,37 @@ body {
   left: 44%;
 }
 
-.img-head {
-  cursor: not-allowed;
-}
-
 .img-you {
   cursor: pointer;
+}
+
+@media screen and (max-width: 992px) {
+  .bot-md-head {
+    position: absolute;
+    top: 340px;
+  }
+  .bot-md-child {
+    top: 580px;
+  }
+  .click {
+    position: relative;
+    top: 800px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .dots-sm-1 {
+    position: relative;
+    left: 300px;
+  }
+  .fs-sm-18 {
+    font-size: 18px;
+  }
+  .size-75 {
+    font-size: 55px;
+  }
+  .notif {
+    position: absolute;
+    width: 360px;
+  }
 }
