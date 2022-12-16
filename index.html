@@ -4,6 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Rock Scissor Paper</title>
+    <link href="./assets/batu.png" rel="icon" />
     <link href="./css/bootstrap.css" rel="stylesheet" />
     <link href="./css/style.css" rel="stylesheet" />
   </head>
@@ -11,10 +12,12 @@
     <!-- score -->
     <div class="container-fluid">
       <div class="row fs-4">
-        <div class="fw-bold score">
-          <p class="text-start text-white">
+        <div class="fw-bold score d-flex justify-content-between">
+          <p class="text-start text-white opacity-0" id="currentsc">
             Current Score : 0
-            <span>Highest Score : 0</span>
+          </p>
+          <p class="text-start text-white opacity-0" id="highsc">
+            High Score : 0
           </p>
         </div>
       </div>
@@ -30,20 +33,15 @@
           >
             <img
               src="./assets/kertasFlip.svg"
-              alt="Com"
-              class="img-fluid thumb"
+              alt="com"
+              class="img-fluid thumb comChoose"
             />
           </div>
         </div>
 
         <div class="row not">
           <div class="d-flex justify-content-center align-self-center">
-            <img
-              src="./assets/won.svg"
-              alt="Alert"
-              class="notif"
-              width="300px"
-            />
+            <img src="./assets/won.svg" alt="alert" class="notif opacity-0" />
           </div>
         </div>
 
@@ -53,21 +51,39 @@
           >
             <img
               src="./assets/gunting.png"
-              alt="Gunting"
-              class="img-fluid thumb"
+              alt="gunting"
+              class="img-fluid thumb userChoose"
             />
           </div>
         </div>
 
         <div class="row d-flex justify-content-center align-items-center item">
-          <div class="col-lg-2 col-4">
-            <img src="./assets/batu.png" alt="Batu" class="img-fluid" />
+          <div class="col-lg-2 col-4" alt="batu" b>
+            <img
+              src="./assets/batu.png"
+              alt="batu"
+              data-value="batu"
+              class="img-fluid item"
+              style="cursor: pointer"
+            />
           </div>
-          <div class="col-lg-2 col-4">
-            <img src="./assets/gunting.png" alt="Gunting" class="img-fluid" />
+          <div class="col-lg-2 col-4" alt="gunting">
+            <img
+              src="./assets/gunting.png"
+              alt="gunting"
+              data-value="gunting"
+              class="img-fluid item"
+              style="cursor: pointer"
+            />
           </div>
-          <div class="col-lg-2 col-4">
-            <img src="./assets/kertas.png" alt="Kertas" class="img-fluid" />
+          <div class="col-lg-2 col-4" alt="kertas">
+            <img
+              src="./assets/kertas.png"
+              alt="kertas"
+              data-value="kertas"
+              class="img-fluid item"
+              style="cursor: pointer"
+            />
           </div>
         </div>
       </div>

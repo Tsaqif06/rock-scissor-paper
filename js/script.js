@@ -1,35 +1,37 @@
-// //Declaration
-// let hasil = '';
-// let lagi = true;
+//Declaration
+const comImg = document.querySelector('.comChoose');
+const userImg = document.querySelector('.userChoose');
+const notif = document.querySelector('.notif');
+const items = document.querySelectorAll('.item')
 
-// //Looping
-// while (lagi == true) {
-// //User Memilih
-// let user = prompt('Game Batu Gunting Kertas\nSilahkan Pilih : \n Batu\n Gunting\n Kertas');
+//getCom
+const getCom = () => {
+    const com = Math.floor(Math.random() * 3) + 1;
+    if (com == 1) return 'batu';
+    if (com == 2) return 'gunting';
+    return 'kertas';
+}
 
-// //Lawan Memilih
-// let enemy = Math.floor(Math.random() * 3);
-// let enemy2 = 'Batu';
-// if (enemy == 1 || enemy2 == 1) {
-//    enemy = 'Batu'
-//    enemy2 = 'batu'
-// } else if (enemy == 2 || enemy2 == 2) {
-//    enemy = 'Gunting'
-//    enemy2 = 'gunting'
-// } else {
-//    enemy = 'Kertas'
-//    enemy2 = 'kertas'
-// }
+//getHasil
+const getHasil = (com, user) => {
+    if (com == user) return 'draw';
+    if (com == 'batu') return (user == 'gunting') ? 'lose' : 'won';
+    if (com == 'gunting') return (user == 'kertas') ? 'lose' : 'won';
+    if (com == 'kertas') return (user == 'batu') ? 'lose' : 'won';
+}
 
-// //Rules
-// if (user == enemy || user == enemy2) {
-//    hasil = 'SERI';
-// } else if (user == 'Batu' || user == 'batu') {
-//    hasil = (enemy == 'Gunting' && enemy2 == 'gunting') ? 'KAMU MENANG!' : 'KAMU KALAH!';
-// } else if (user == 'Gunting' || user == 'gunting') {
-//    hasil = (enemy == 'Kertas' && enemy2 == 'kertas') ? 'KAMU MENANG!' : 'KAMU KALAH!';
-// } else if (user == 'Kertas' || user == 'kertas') {
-//    hasil = (enemy == 'Batu' && enemy2 == 'batu') ? 'KAMU MENANG!' : 'KAMU KALAH!';
-// } else {
-//    hasil = 'Pilihan Salah!'
-//}
+//event && getUser
+items.forEach((item) => {
+    item.addEventListener('click', (e) => {
+        e.stopPropagation();
+        item.style.transform = "scale(10px)";
+        const pilihanCom = getCom();
+        const pilihanUser = item.getAttribute('data-value');
+        const hasil = getHasil(pilihanCom, pilihanUser);
+        comImg.src = `./assets/${pilihanCom}Flip.svg`
+        userImg.src = `./assets/${pilihanUser}.png`
+        notif.src = `./assets/${hasil}.svg`
+        notif.classList.remove('opacity-0')
+        score(hasil);
+    });
+});

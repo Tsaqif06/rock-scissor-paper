@@ -25,6 +25,7 @@ body {
 }
 
 .notif {
+  width: 200px;
   transform: translateX(20px);
   -webkit-transform: translateX(20px);
   -moz-transform: translateX(20px);
@@ -40,15 +41,20 @@ body {
     -ms-transform: translateX(80px);
     -o-transform: translateX(80px);
   }
+  .notif {
+    width: 140px;
+    transform: translateX(10px);
+    -webkit-transform: translateX(10px);
+    -moz-transform: translateX(10px);
+    -ms-transform: translateX(10px);
+    -o-transform: translateX(10px);
+  }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 768px) and (min-width: 549px) {
   .thumb {
-    transform: translateX(64px);
-    -webkit-transform: translateX(64px);
-    -moz-transform: translateX(64px);
-    -ms-transform: translateX(64px);
-    -o-transform: translateX(64px);
+    padding-right: 100px;
+    margin-left: 30px;
   }
 }
 
@@ -60,10 +66,8 @@ body {
     -ms-transform: translateX(5%);
     -o-transform: translateX(5%);
   }
-}
-
-@media screen and (max-width: 380) {
-  .notif {
-    width: 75px;
+  .score p,
+  .score span {
+    font-size: 12px;
   }
 }
