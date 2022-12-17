@@ -24,6 +24,10 @@ body {
   letter-spacing: 5px;
 }
 
+.comChoose {
+  margin-bottom: 10px;
+}
+
 .notif {
   width: 200px;
   transform: translateX(20px);

@@ -4,6 +4,21 @@ const userImg = document.querySelector('.userChoose');
 const notif = document.querySelector('.notif');
 const items = document.querySelectorAll('.item')
 
+//Rand
+const putar = () => {
+    const images = ['batu', 'gunting', 'kertas']
+    let i = 0;
+    const start = new Date().getTime();
+    setInterval(() => {
+        if (new Date().getTime() - start > 1000) {
+            clearInterval;
+            return;
+        }
+        comImg.src = `./assets/${images[i++]}Flip.svg`
+        if (i == images.length) i = 0;
+    }, 100);
+}
+
 //getCom
 const getCom = () => {
     const com = Math.floor(Math.random() * 3) + 1;
@@ -24,14 +39,16 @@ const getHasil = (com, user) => {
 items.forEach((item) => {
     item.addEventListener('click', (e) => {
         e.stopPropagation();
-        item.style.transform = "scale(10px)";
+        notif.classList.add('opacity-0');
         const pilihanCom = getCom();
         const pilihanUser = item.getAttribute('data-value');
         const hasil = getHasil(pilihanCom, pilihanUser);
-        comImg.src = `./assets/${pilihanCom}Flip.svg`
-        userImg.src = `./assets/${pilihanUser}.png`
-        notif.src = `./assets/${hasil}.svg`
-        notif.classList.remove('opacity-0')
-        score(hasil);
+        putar();
+        userImg.src = `./assets/${pilihanUser}.png`;
+        setTimeout(() => {
+            comImg.src = `./assets/${pilihanCom}Flip.svg`;
+            notif.src = `./assets/${hasil}.svg`;
+            notif.classList.remove('opacity-0');
+        }, 1000);
     });
 });
